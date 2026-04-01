@@ -67,22 +67,30 @@ header {
 @keyframes left-to-right {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-50px);
   }
-  30% {
+  /* 30% {
+    opacity: 0;
+    transform: translateX(-40px);
+  } */
+  40% {
     color: orange;
   }
   50% {
     opacity: 0.5;
-    transform: translateX(-50px);
+    visibility: visible;
+    transform: translateX(-25px);
   }
   100% {
     opacity: 1;
+    visibility: visible;
     transform: translateX(0);
   }
 }
 .banner-left {
+  visibility: hidden;
   animation: left-to-right 0.7s ease-out forwards;
+  animation-delay: 1s;
 }
 .banner-heading {
   font-size: 80px;
@@ -102,17 +110,20 @@ header {
   }
   50% {
     opacity: 0.5;
+    visibility: visible;
     transform: translateX(50px);
   }
   100% {
     opacity: 1;
+    visibility: visible;
     transform: translateX(0);
   }
 }
 .banner-right {
   width: 50%;
   position: relative;
-  animation: right-to-left 0.7s ease-out forwards;
+  visibility: hidden;
+  animation: right-to-left 0.7s ease-out 1s forwards;
 }
 .banner img {
   width: 100%;
